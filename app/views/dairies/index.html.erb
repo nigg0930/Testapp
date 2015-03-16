@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>睡眠を振り返る</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+       <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dairies.each do |dairy| %>
+      <tr>
+        <td><%= dairy.title %></td>
+        <td><%= link_to '日記を見る', dairy %></td>
+        <td><%= link_to '編集する', edit_dairy_path(dairy) %></td>
+        <td><%= link_to '削除する', dairy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '日記を書く', new_dairy_path %>

@@ -1,0 +1,42 @@
+<%= form_for(@dairy) do |f| %>
+  <% if @dairy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dairy.errors.count, "error") %> prohibited this dairy from being saved:</h2>
+
+      <ul>
+      <% @dairy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :タイトル
+ %><br>
+    <%= f.text_field :title  %>
+  </div>
+  <div class="field">
+    <%= f.label :前回と比べて睡眠に変化はありましたか？
+ %><br>
+    <%= f.text_area :first,:size => "30x10" %>
+  </div>
+  <div class="field">
+    <%= f.label :今回行った行動で睡眠の改善に効果のあったことは何ですか？
+
+ %><br>
+    <%= f.text_area :second,:size => "30x10"%>
+  </div>
+  <div class="field">
+    <%= f.label :睡眠に関する行動の中で改善できそうなものは何ですか？ %><br>
+    <%= f.text_area :third,:size => "30x10" %>
+  </div>
+  <div class="field">
+    <%= f.label :改善できそうな中で今回の目標を設定しましょう
+ %><br>
+    <%= f.text_area :fourth,:size => "30x10" %>
+  </div>
+  <div class="actions">
+    <%= f.submit(['日記を書く'])  %>
+  </div>
+<% end %>

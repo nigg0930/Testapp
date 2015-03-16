@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dairy.title %>
+</p>
+
+<p>
+  <strong>First:</strong>
+  <%= @dairy.first %>
+</p>
+
+<p>
+  <strong>Second:</strong>
+  <%= @dairy.second %>
+</p>
+
+<p>
+  <strong>Third:</strong>
+  <%= @dairy.third %>
+</p>
+
+<p>
+  <strong>Fourth:</strong>
+  <%= @dairy.fourth %>
+</p>
+
+<%= link_to '編集する', edit_dairy_path(@dairy) %> |
+<%= link_to '戻る', dairies_path %>

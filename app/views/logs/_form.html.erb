@@ -1,0 +1,37 @@
+<%= form_for(@log) do |f| %>
+  <% if @log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@log.errors.count, "error") %> prohibited this log from being saved:</h2>
+
+      <ul>
+      <% @log.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :BedInTime %><br>
+    <%= f.number_field :BedInTime %>
+  </div>
+  <div class="field">
+    <%= f.label :SleepInTime %><br>
+    <%= f.number_field :SleepInTime %>
+  </div>
+  <div class="field">
+    <%= f.label :WakeUpTime %><br>
+    <%= f.number_field :WakeUpTime %>
+  </div>
+  <div class="field">
+    <%= f.label :BedOutTime %><br>
+    <%= f.number_field :BedOutTime %>
+  </div>
+  <div class="field">
+    <%= f.label :Quority %><br>
+    <%= f.text_field :Quority %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

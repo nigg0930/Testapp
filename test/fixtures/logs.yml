@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BedInTime: 1
+  SleepInTime: 1
+  WakeUpTime: 1
+  BedOutTime: 1
+  Quority: 
+
+two:
+  BedInTime: 1
+  SleepInTime: 1
+  WakeUpTime: 1
+  BedOutTime: 1
+  Quority: 
